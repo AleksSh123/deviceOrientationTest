@@ -26,6 +26,7 @@
         const alphaO = document.getElementById("alpha");
         const betaO = document.getElementById("beta");
         const gammaO = document.getElementById("gamma");
+        DeviceOrientationEvent.requestPermission();
         window.addEventListener("deviceorientation", function (event){
             alphaO.innerHTML = event.alpha;
             betaO.innerHTML = event.beta;
