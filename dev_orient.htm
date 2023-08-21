@@ -26,13 +26,13 @@
         const alphaO = document.getElementById("alpha");
         const betaO = document.getElementById("beta");
         const gammaO = document.getElementById("gamma");
-        window.addEventListener("deviceorientation", processEvent(event), true);
-
-        function processEvent(event){
+        window.addEventListener("deviceorientation", function (event){
             alphaO.innerHTML = event.alpha;
             betaO.innerHTML = event.beta;
             gammaO.innerHTML = event.gamma;
-        }
+        }, true);
+
+        
 
     </script>
 </body>
