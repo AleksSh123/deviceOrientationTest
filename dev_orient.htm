@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device orientation test page</title>
+</head>
+<body>
+    <h5>Hello! This is deviace orientation test page!</h5>
+    <p>testing ouput below</p>
+    <div>
+        alpha:
+        <span id="alpha">--</span>
+    </div>
+    <div>
+        beta:
+        <span id="beta">--</span>
+    </div>
+    <div>
+        gamma:
+        <span id="gamma">--</span>
+    </div>
+
+    <script type="text/javascript">
+        const alphaO = document.getElementById("alpha");
+        const betaO = document.getElementById("beta");
+        const gammaO = document.getElementById("gamma");
+        window.addEventListener("deviceorientation", processEvent(event), true);
+
+        function processEvent(event){
+            alphaO.innerHTML = event.alpha;
+            betaO.innerHTML = event.beta;
+            gammaO.innerHTML = event.gamma;
+        }
+
+    </script>
+</body>
+</html>
