@@ -26,12 +26,12 @@
         const alphaO = document.getElementById("alpha");
         const betaO = document.getElementById("beta");
         const gammaO = document.getElementById("gamma");
-        DeviceOrientationEvent.requestPermission();
+        DeviceMotionEvent.requestPermission();
         window.addEventListener("deviceorientation", function (event){
             alphaO.innerHTML = event.alpha;
             betaO.innerHTML = event.beta;
             gammaO.innerHTML = event.gamma;
-        }, false);
+        });
 
         
 
