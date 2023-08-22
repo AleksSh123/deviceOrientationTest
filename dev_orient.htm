@@ -7,7 +7,7 @@
     <title>Device orientation test page</title>
 </head>
 <body>
-    <h5>Hello! This is deviace orientation test page v.0.1.4a!</h5>
+    <h5>Hello! This is deviace orientation test page v.0.1.4b!</h5>
     <input type="button" value="start" onclick="start(event)">
     <p>testing ouput below</p>
     <div>
@@ -26,6 +26,12 @@
     <script>
         function start(e){
             e.preventDefault();
+            if (
+            DeviceMotionEvent &&
+            typeof DeviceMotionEvent.requestPermission === "function"
+            ) {
+                DeviceMotionEvent.requestPermission();
+               };
             window.addEventListener("deviceorientation", handleOrientation);
             window.addEventListener("devicemotion", handleMotion)
         }
@@ -46,12 +52,7 @@
         let alphaO = document.getElementById("alpha");
         let betaO = document.getElementById("beta");
         let gammaO = document.getElementById("gamma");
-        if (
-            DeviceMotionEvent &&
-            typeof DeviceMotionEvent.requestPermission === "function"
-            ) {
-                DeviceMotionEvent.requestPermission();
-               }
+       
         
         
 
