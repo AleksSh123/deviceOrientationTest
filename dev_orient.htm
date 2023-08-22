@@ -36,7 +36,7 @@
             //window.addEventListener("devicemotion", handleMotion)
         }
         function handleOrientation(event){
-            alphaO.innerHTML = event.alpha;
+            alphaO.innerHTML = Math.round(event.alpha);
             betaO.innerHTML = event.beta;
             gammaO.innerHTML = event.gamma;
             console.log(event.alpha);
