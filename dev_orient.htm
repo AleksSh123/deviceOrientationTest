@@ -39,7 +39,7 @@
             alphaO.innerHTML = Math.round(event.alpha);
             let angle = Math.round(event.alpha);
             let cosAngle = Math.cos(degToRad(angle));
-            let artang = radToDeg(Math.atan(cosAngle));
+            let artang = radToDeg(Math.acos(cosAngle));
             betaO.innerHTML = artang;
             //betaO.innerHTML = event.beta;
            // gammaO.innerHTML = event.gamma;
