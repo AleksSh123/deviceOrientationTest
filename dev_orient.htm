@@ -38,8 +38,8 @@
         function handleOrientation(event){
             alphaO.innerHTML = Math.round(event.alpha);
             let angle = Math.round(event.alpha);
-            let cosAngle = Math.cos(angle);
-            let artang = Math.atan(cosAngle);
+            let cosAngle = Math.cos(degToRad(angle));
+            let artang = radToDeg(Math.atan(cosAngle));
             betaO.innerHTML = artang;
             //betaO.innerHTML = event.beta;
            // gammaO.innerHTML = event.gamma;
@@ -48,6 +48,14 @@
 
         function handleMotion(event){
             console.log("motion!");
+        }
+
+        function degToRad(angle){
+        return angle * Math.PI / 180;
+        }
+
+    function radToDeg(angle){
+        return angle * 180 / Math.PI;
         }
 
 
