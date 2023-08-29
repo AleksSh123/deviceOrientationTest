@@ -45,9 +45,9 @@
             */
            let angle2 = 0;
            if (angle <= 180){
-               angle2 = -angle;
+               angle2 = angle;
            } else {
-               angle2 = 360 - angle;
+               angle2 = angle - 360;
            }
            betaO.innerHTML = angle2;
             //betaO.innerHTML = event.beta;
