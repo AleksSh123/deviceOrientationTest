@@ -38,8 +38,8 @@
         function handleOrientation(event){
             alphaO.innerHTML = Math.round(event.alpha);
             let angle = Math.round(event.alpha);
-            let cosAngle = Math.cos(degToRad(angle));
-            let artang = radToDeg(Math.acos(cosAngle));
+            let cosAngle = Math.tan(degToRad(angle));
+            let artang = radToDeg(Math.atan(cosAngle));
             betaO.innerHTML = artang;
             //betaO.innerHTML = event.beta;
            // gammaO.innerHTML = event.gamma;
