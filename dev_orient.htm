@@ -7,7 +7,7 @@
     <title>Device orientation test page</title>
 </head>
 <body>
-    <h5>Hello! This is deviace orientation test page v.0.1.6!</h5>
+    <h5>Hello! This is deviace orientation test page v.0.1.7!</h5>
     <input type="button" value="start" onclick="start(event)">
     <p>testing ouput below</p>
     <div>
@@ -21,6 +21,10 @@
     <div>
         gamma:
         <span id="gamma">--</span>
+    </div>
+    <div>
+        absolute:
+        <span id="absolute">--</span>
     </div>
 
     <script>
@@ -52,6 +56,7 @@
            betaO.innerHTML = angle2;
             //betaO.innerHTML = event.beta;
            // gammaO.innerHTML = event.gamma;
+           absoluteO.innerHTML = event.absolute;
            // console.log(event.alpha);
         };
 
@@ -73,6 +78,7 @@
         let alphaO = document.getElementById("alpha");
         let betaO = document.getElementById("beta");
         let gammaO = document.getElementById("gamma");
+        let absoluteO = document.getElementById("absolute");
        
         
         
